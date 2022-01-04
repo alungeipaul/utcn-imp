@@ -253,6 +253,20 @@ void Lexer::NextChar()
     is_.get(chr_);
   }
 }
+/*
+// -----------------------------------------------------------------------------
+int64_t Lexer::NextInteger()
+{
+  uint64_t value = 0;
+  do {
+      value *= 10;
+      value += (chr_ - '0');
+      NextChar();
+  } while(isdigit(chr_));
+
+  return value;
+}
+*/
 
 // -----------------------------------------------------------------------------
 void Lexer::Error(const std::string &msg)
