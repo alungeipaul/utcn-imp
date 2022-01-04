@@ -26,7 +26,8 @@ enum class Opcode : uint8_t {
 
   JUMP_FALSE,
   JUMP,
-  STOP
+  STOP,
+  PUSH_INT
 };
 
 /**

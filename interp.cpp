@@ -76,6 +76,11 @@ void Interp::Run()
         pc_ = prog_.Read<size_t>(pc_);
         continue;
       }
+      case Opcode::PUSH_INT: {
+      	auto nb=prog_.Read<int64_t>(pc_);
+      	Push<int64_t>(nb);
+      	continue;
+      }
       case Opcode::STOP: {
         return;
       }
